@@ -1,10 +1,10 @@
 import os from 'node:os'
 import path from 'node:path'
-import openInEditor from 'open-in-editor'
+import createEditor from 'open-in-editor'
 import type { Plugin } from 'vite'
 
-export function OpenInEditor(): Plugin {
-  const editor = openInEditor.configure({
+export function openInEditor(): Plugin {
+  const editor = createEditor.configure({
     editor: 'code',
     dotfiles: 'allow',
   })
